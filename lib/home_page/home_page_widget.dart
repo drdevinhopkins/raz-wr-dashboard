@@ -520,7 +520,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                               ),
                               Text(
-                                GetStatsCall.currentTimestamp(
+                                GetStatsCall.updateTimestamp(
                                   rowGetStatsResponse.jsonBody,
                                 ).toString(),
                                 style: FlutterFlowTheme.of(context)
