@@ -40,4 +40,8 @@ class GetStatsCall {
         response,
         r'''$.message.updateTimestamp''',
       );
+  static dynamic busyColour(dynamic response) => getJsonField(
+        response,
+        r'''$.message.busyColour''',
+      );
 }
