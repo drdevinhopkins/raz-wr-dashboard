@@ -255,10 +255,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       .bodyText1
                                                       .override(
                                                         fontFamily: 'Open Sans',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryColor,
+                                                        color: GetStatsCall
+                                                                    .busyColour(
+                                                                  rowGetStatsResponse
+                                                                      .jsonBody,
+                                                                ).toString() ==
+                                                                'red'
+                                                            ? FlutterFlowTheme
+                                                                    .of(context)
+                                                                .darkRed
+                                                            : FlutterFlowTheme
+                                                                    .of(context)
+                                                                .yellow,
                                                         fontSize: 36,
                                                         lineHeight: 1.5,
                                                       ),
