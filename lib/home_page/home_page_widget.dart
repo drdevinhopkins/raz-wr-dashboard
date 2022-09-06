@@ -22,6 +22,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     super.initState();
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(milliseconds: 14000));
+      await pageViewController?.nextPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      await Future.delayed(const Duration(milliseconds: 10000));
+      await pageViewController?.nextPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
       await Future.delayed(const Duration(milliseconds: 10000));
       await pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
@@ -722,7 +732,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           flex: 1,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
                                 padding:
