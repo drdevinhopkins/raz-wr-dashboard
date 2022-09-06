@@ -53,22 +53,3 @@ class GetStatsCall {
         r'''$.message.last24Colour''',
       );
 }
-
-class GetQRCall {
-  static Future<ApiCallResponse> call({
-    String? size = '150x150',
-    String? data = 'Example',
-  }) {
-    return ApiManager.instance.makeApiCall(
-      callName: 'getQR',
-      apiUrl: 'https://api.qrserver.com/v1/create-qr-code/',
-      callType: ApiCallType.GET,
-      headers: {},
-      params: {
-        'size': size,
-        'data': data,
-      },
-      returnBody: true,
-    );
-  }
-}
