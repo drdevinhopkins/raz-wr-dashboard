@@ -76,10 +76,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
                       'assets/images/small_jgh_logo.png',
-                      width: 400,
+                      width: 300,
                       fit: BoxFit.scaleDown,
                     ),
                     Padding(
@@ -166,12 +167,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    20, 20, 20, 20),
+                                                    50, 50, 50, 50),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                  MainAxisAlignment.spaceEvenly,
                                               children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 20),
+                                                  child: Text(
+                                                    'Welcome to the Emergency Department.',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Open Sans',
+                                                          fontSize: 24,
+                                                        ),
+                                                  ),
+                                                ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(0, 0, 0, 20),
@@ -189,7 +206,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  'Some patients may pass before you if their problem is more urgent.',
+                                                  'New patients will be seen in order of priority, not on a \"first-come, first-served\" basis.',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -226,7 +243,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    20, 20, 20, 20),
+                                                    50, 50, 50, 50),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -255,34 +272,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       .bodyText1
                                                       .override(
                                                         fontFamily: 'Open Sans',
-                                                        color: GetStatsCall
-                                                                    .busyColour(
-                                                                  rowGetStatsResponse
-                                                                      .jsonBody,
-                                                                ).toString() ==
-                                                                'red'
-                                                            ? FlutterFlowTheme
-                                                                    .of(context)
-                                                                .darkRed
-                                                            : GetStatsCall
-                                                                            .busyColour(
-                                                                      rowGetStatsResponse
-                                                                          .jsonBody,
-                                                                    )
-                                                                        .toString() ==
-                                                                    'orange'
-                                                                ? FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .orange
-                                                                : FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .yellow,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryColor,
                                                         fontSize: 36,
                                                         lineHeight: 1.5,
                                                       ),
                                                 ),
                                                 Text(
-                                                  'Wait times may be longer than expected. \n\nThis may include the wait to see a doctor, \nto receive treatments, or to have tests done.',
+                                                  'Wait times may be longer than expected, \n including the wait to see a doctor, to undergo tests, to receive treatments, and for results.',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -320,15 +319,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    20, 20, 20, 20),
+                                                    50, 50, 50, 50),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceEvenly,
                                               children: [
                                                 Text(
-                                                  'If you feel that your symptoms have worsened while waiting to see a doctor, please return to Triage and ask to be reassessed.',
+                                                  'If you feel that your symptoms have worsened while waiting to see a doctor, please:',
                                                   textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  '1. Return to Triage\n2. Take a new numbered ticket\n3. When your number is called, ask the nurse to be reassessed\n\nYou will not lose your place in line',
+                                                  textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
@@ -364,15 +374,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    20, 20, 20, 20),
+                                                    50, 50, 50, 50),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceEvenly,
                                               children: [
                                                 Text(
-                                                  'For less urgent problems, we can often help you book an appointment\nwithin 24-72 hours with one of our affiliated urgent care clinics. \n\nIf you are interested, please return to Triage and ask about \"Reorientation\".',
+                                                  'For less urgent problems, we can often help you book an appointment within 24-72 hours with one of our affiliated urgent care clinics. If you are interested, please:',
                                                   textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                        lineHeight: 1.5,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  '1. Return to Triage\n2. Take a new numbered ticket\n3. When your number is called, ask the nurse about \"Reorientation\"',
+                                                  textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
@@ -406,61 +428,254 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(30),
                                           ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'For more information, please download the JGH Users Guide',
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'Open Sans',
-                                                          fontSize: 24,
-                                                        ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(50, 0, 50, 0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceAround,
-                                                  children: [
-                                                    Image.asset(
-                                                      'assets/images/jghuserguide.jpeg',
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.3,
-                                                      height:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .height *
-                                                              0.4,
-                                                      fit: BoxFit.contain,
-                                                    ),
-                                                    Image.asset(
-                                                      'assets/images/jghuserguideQRC.png',
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              0.2,
-                                                      height: 300,
-                                                      fit: BoxFit.contain,
-                                                    ),
-                                                  ],
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    50, 50, 50, 50),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Text(
+                                                  'Want more information?',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
                                                 ),
-                                              ),
+                                                Text(
+                                                  'Please download the JGH Users Guide:',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(50, 0, 50, 0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    children: [
+                                                      Image.asset(
+                                                        'assets/images/jghuserguide.jpeg',
+                                                        width: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .width *
+                                                            0.3,
+                                                        height: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .height *
+                                                            0.4,
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                      Image.asset(
+                                                        'assets/images/jghuserguideQRC.png',
+                                                        width: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .width *
+                                                            0.2,
+                                                        height: 200,
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            50, 50, 50, 50),
+                                        child: Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                blurRadius: 4,
+                                                color: Color(0x33000000),
+                                                offset: Offset(0, 2),
+                                              )
                                             ],
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    50, 50, 50, 50),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Text(
+                                                  'Interested in helping us improve the waiting experience for patients and visitors?',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  'Please take our survey!',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  'Point your smartphone\'s camera app at the QR code below and follow the link.',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(50, 0, 50, 0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    children: [
+                                                      Image.asset(
+                                                        'assets/images/survey-qr.png',
+                                                        width: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .width *
+                                                            0.2,
+                                                        height: 150,
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            50, 50, 50, 50),
+                                        child: Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                blurRadius: 4,
+                                                color: Color(0x33000000),
+                                                offset: Offset(0, 2),
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    50, 50, 50, 50),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Text(
+                                                  'Would you like to show your appreciation for one of our team members?',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  'Send them a personalized thank you message!',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  'Point your smartphone\'s camera app at the QR code below and follow the link.',
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 24,
+                                                      ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(50, 0, 50, 0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    children: [
+                                                      Image.asset(
+                                                        'assets/images/thank-a-team-member-qr.png',
+                                                        width: MediaQuery.of(
+                                                                    context)
+                                                                .size
+                                                                .width *
+                                                            0.2,
+                                                        height: 150,
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -475,7 +690,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     child: SmoothPageIndicator(
                                       controller: pageViewController ??=
                                           PageController(initialPage: 0),
-                                      count: 5,
+                                      count: 7,
                                       axisDirection: Axis.horizontal,
                                       onDotClicked: (i) {
                                         pageViewController!.animateToPage(
@@ -507,7 +722,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           flex: 1,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
                                 padding:
@@ -556,27 +771,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Open Sans',
-                                                  color: GetStatsCall
-                                                              .occupancyColour(
-                                                            rowGetStatsResponse
-                                                                .jsonBody,
-                                                          ).toString() ==
-                                                          'red'
-                                                      ? FlutterFlowTheme.of(
-                                                              context)
-                                                          .darkRed
-                                                      : GetStatsCall
-                                                                  .occupancyColour(
-                                                                rowGetStatsResponse
-                                                                    .jsonBody,
-                                                              ).toString() ==
-                                                              'orange'
-                                                          ? FlutterFlowTheme.of(
-                                                                  context)
-                                                              .orange
-                                                          : FlutterFlowTheme.of(
-                                                                  context)
-                                                              .yellow,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryColor,
                                                   fontSize: 24,
                                                 ),
                                           ),
@@ -642,25 +839,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Open Sans',
-                                                  color: GetStatsCall.tbsColour(
-                                                            rowGetStatsResponse
-                                                                .jsonBody,
-                                                          ).toString() ==
-                                                          'red'
-                                                      ? FlutterFlowTheme.of(
-                                                              context)
-                                                          .darkRed
-                                                      : GetStatsCall.tbsColour(
-                                                                rowGetStatsResponse
-                                                                    .jsonBody,
-                                                              ).toString() ==
-                                                              'orange'
-                                                          ? FlutterFlowTheme.of(
-                                                                  context)
-                                                              .orange
-                                                          : FlutterFlowTheme.of(
-                                                                  context)
-                                                              .yellow,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryColor,
                                                   fontSize: 24,
                                                 ),
                                           ),
@@ -685,7 +866,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                                 child: Container(
                                   width: 300,
-                                  height: 175,
+                                  height: 150,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -727,27 +908,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Open Sans',
-                                                  color: GetStatsCall
-                                                              .last24Colour(
-                                                            rowGetStatsResponse
-                                                                .jsonBody,
-                                                          ).toString() ==
-                                                          'red'
-                                                      ? FlutterFlowTheme.of(
-                                                              context)
-                                                          .darkRed
-                                                      : GetStatsCall
-                                                                  .last24Colour(
-                                                                rowGetStatsResponse
-                                                                    .jsonBody,
-                                                              ).toString() ==
-                                                              'orange'
-                                                          ? FlutterFlowTheme.of(
-                                                                  context)
-                                                              .orange
-                                                          : FlutterFlowTheme.of(
-                                                                  context)
-                                                              .yellow,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryColor,
                                                   fontSize: 24,
                                                 ),
                                           ),

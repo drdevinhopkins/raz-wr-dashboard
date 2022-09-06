@@ -44,10 +44,6 @@ class GetStatsCall {
         response,
         r'''$.message.busyColour''',
       );
-  static dynamic occupancyColour(dynamic response) => getJsonField(
-        response,
-        r'''$.message.occupancyColour''',
-      );
   static dynamic tbsColour(dynamic response) => getJsonField(
         response,
         r'''$.message.tbsColour''',
@@ -55,5 +51,9 @@ class GetStatsCall {
   static dynamic last24Colour(dynamic response) => getJsonField(
         response,
         r'''$.message.last24Colour''',
+      );
+  static dynamic occupancyColour(dynamic response) => getJsonField(
+        response,
+        r'''$.message.occupancyColour''',
       );
 }
