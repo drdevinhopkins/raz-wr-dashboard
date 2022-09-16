@@ -4,6 +4,8 @@ import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
 
+const _kPrivateApiFunctionName = 'ffPrivateApiCall';
+
 class GetStatsCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(

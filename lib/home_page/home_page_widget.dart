@@ -53,6 +53,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
+
       context.goNamed(
         'HomePage',
         extra: <String, dynamic>{
@@ -99,17 +100,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         'URGENCE - EMERGENCY',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Color(0xFFF84646),
+                              fontFamily: 'Gotham HTF',
+                              color: Color(0xFFDE3554),
                               fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
                     Text(
                       '${dateTimeFormat('MMMMEEEEd', getCurrentTimestamp)}     ${dateTimeFormat('jm', getCurrentTimestamp)}',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Open Sans',
+                            fontFamily: 'Gotham HTF',
                             fontSize: 18,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ],
@@ -177,54 +181,163 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.center,
                                               children: [
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 0, 0, 20),
+                                                      .fromSTEB(0, 0, 0, 40),
                                                   child: Text(
-                                                    'Welcome to the Emergency Department.',
+                                                    '- WELCOME TO THE EMERGENCY DEPARTMENT -',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodyText1
+                                                        .title1
                                                         .override(
                                                           fontFamily:
-                                                              'Open Sans',
-                                                          fontSize: 24,
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .textDarkBlue,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 0, 0, 20),
+                                                      .fromSTEB(0, 0, 0, 40),
                                                   child: Text(
-                                                    'Our team is working hard to see new patients as soon as possible. ',
+                                                    'OUR TEAM IS WORKING HARD TO SEE NEW PATIENTS AS SOON AS POSSIBLE.',
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyText1
                                                         .override(
                                                           fontFamily:
-                                                              'Open Sans',
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .textDarkBlue,
                                                           fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
-                                                Text(
-                                                  'New patients will be seen in order of priority, not on a \"first-come, first-served\" basis.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Wrap(
+                                                  spacing: 0,
+                                                  runSpacing: 0,
+                                                  alignment:
+                                                      WrapAlignment.center,
+                                                  crossAxisAlignment:
+                                                      WrapCrossAlignment.end,
+                                                  direction: Axis.horizontal,
+                                                  runAlignment:
+                                                      WrapAlignment.start,
+                                                  verticalDirection:
+                                                      VerticalDirection.down,
+                                                  clipBehavior: Clip.none,
+                                                  children: [
+                                                    Text(
+                                                      'NEW PATIENTS WILL BE SEEN IN ',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .textDarkBlue,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      'ORDER OF PRIORITY,',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .textDarkBlue,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Wrap(
+                                                  spacing: 0,
+                                                  runSpacing: 0,
+                                                  alignment:
+                                                      WrapAlignment.center,
+                                                  crossAxisAlignment:
+                                                      WrapCrossAlignment.start,
+                                                  direction: Axis.horizontal,
+                                                  runAlignment:
+                                                      WrapAlignment.start,
+                                                  verticalDirection:
+                                                      VerticalDirection.down,
+                                                  clipBehavior: Clip.none,
+                                                  children: [
+                                                    Text(
+                                                      'FIRST-COME, FIRST-SERVED ',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .textDarkBlue,
+                                                                fontStyle:
+                                                                    FontStyle
+                                                                        .italic,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      'BASIS.',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .textDarkBlue,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -253,53 +366,157 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'Today, the Emergency Department is',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                        lineHeight: 1.5,
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'TODAY, THE EMERGENCY DEPARTMENT IS',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .textDarkBlue,
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    GetStatsCall.busy(
+                                                      rowGetStatsResponse
+                                                          .jsonBody,
+                                                    ).toString(),
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryColor,
+                                                          fontSize: 36,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'WAIT TIMES MAY BE LONGER THAN EXPECTED,',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .textDarkBlue,
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'INCLUDING ',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .textDarkBlue,
+                                                                fontSize: 24,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                                lineHeight: 1.5,
+                                                              ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 0, 0, 5),
+                                                      child: Text(
+                                                        'THE WAIT TO SEE A DOCTOR, TO UNDERGO TESTS,',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText1
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Gotham HTF',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .textDarkBlue,
+                                                                  fontSize: 24,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                  lineHeight:
+                                                                      1.5,
+                                                                ),
                                                       ),
+                                                    ),
+                                                  ],
                                                 ),
                                                 Text(
-                                                  GetStatsCall.busy(
-                                                    rowGetStatsResponse
-                                                        .jsonBody,
-                                                  ).toString(),
-                                                  textAlign: TextAlign.center,
+                                                  'TO RECEIVE TREATMENTS AND FOR RESULTS.',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Open Sans',
+                                                        fontFamily:
+                                                            'Gotham HTF',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryColor,
-                                                        fontSize: 36,
-                                                        lineHeight: 1.5,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  'Wait times may be longer than expected, \n including the wait to see a doctor, to undergo tests, to receive treatments, and for results.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                        lineHeight: 1.5,
+                                                                .textDarkBlue,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -329,88 +546,329 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'If you feel that your symptoms have worsened while waiting to see a doctor, please:',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'IF YOU FEEL THAT YOUR SYMPTOMS HAVE WORSENED',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .textDarkBlue,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'WHILE WAITING TO SEE A DOCTOR, PLEASE:',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryColor,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    '1. RETURN TO TRIAGE\n2. TAKE A NUMBERED TICKET\n3. WHEN YOUR NUMBER IS CALLED,\n     ASK THE NURSE TO BE REASSESSED',
+                                                    textAlign: TextAlign.start,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .darkRed,
+                                                          fontSize: 28,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.3,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'YOU WILL ',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                                fontSize: 28,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      'NOT ',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                                fontSize: 28,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      'LOSE YOUR PLACE IN LINE',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Gotham HTF',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryColor,
+                                                                fontSize: 28,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            50, 50, 50, 50),
+                                        child: Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                blurRadius: 4,
+                                                color: Color(0x33000000),
+                                                offset: Offset(0, 2),
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    20, 20, 20, 20),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'FOR LESS URGENT PROBLEMS,',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'WE CAN OFTEN HELP YOU BOOK AN APPOINTMENT',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        'WITHIN 24-72 HOURS ',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Gotham HTF',
+                                                              fontSize: 24,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w800,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                              lineHeight: 1.5,
+                                                            ),
                                                       ),
+                                                      Text(
+                                                        'WITH ONE OF OUR AFFILIATED',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Gotham HTF',
+                                                              fontSize: 24,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                              lineHeight: 1.5,
+                                                            ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'URGENT CARE CLINICS.',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'IF YOU ARE INTERESTED, PLEASE:',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                          lineHeight: 1.5,
+                                                        ),
+                                                  ),
                                                 ),
                                                 Text(
-                                                  '1. Return to Triage\n2. Take a new numbered ticket\n3. When your number is called, ask the nurse to be reassessed\n\nYou will not lose your place in line',
+                                                  '1. RETURN TO TRIAGE\n2. TAKE A NUMBERED TICKET\n3. WHEN YOUR NUMBER IS CALLED,\n     ASK THE NURSE ABOUT \"REORIENTATION\"',
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Open Sans',
+                                                        fontFamily:
+                                                            'Gotham HTF',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .darkRed,
                                                         fontSize: 24,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            50, 50, 50, 50),
-                                        child: Container(
-                                          width: 100,
-                                          height: 100,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                blurRadius: 4,
-                                                color: Color(0x33000000),
-                                                offset: Offset(0, 2),
-                                              )
-                                            ],
-                                            borderRadius:
-                                                BorderRadius.circular(30),
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              children: [
-                                                Text(
-                                                  'For less urgent problems, we can often help you book an appointment within 24-72 hours with one of our affiliated urgent care clinics. If you are interested, please:',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                        lineHeight: 1.5,
-                                                      ),
-                                                ),
-                                                Text(
-                                                  '1. Return to Triage\n2. Take a new numbered ticket\n3. When your number is called, ask the nurse about \"Reorientation\"',
-                                                  textAlign: TextAlign.start,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: false,
                                                         lineHeight: 1.5,
                                                       ),
                                                 ),
@@ -441,32 +899,38 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceEvenly,
                                               children: [
                                                 Text(
-                                                  'Want more information?',
+                                                  'WANT MORE INFORMATION?',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Open Sans',
+                                                        fontFamily:
+                                                            'Gotham HTF',
                                                         fontSize: 24,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
-                                                  'Please download the JGH Users Guide:',
+                                                  'PLEASE DOWNLOAD THE JGH USERS GUIDE:',
                                                   textAlign: TextAlign.center,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyText1
                                                       .override(
-                                                        fontFamily: 'Open Sans',
+                                                        fontFamily:
+                                                            'Gotham HTF',
                                                         fontSize: 24,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Padding(
@@ -494,7 +958,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         fit: BoxFit.contain,
                                                       ),
                                                       Image.asset(
-                                                        'assets/images/jghuserguideQRC.png',
+                                                        'assets/images/jghuserguideQRC-blue.png',
                                                         width: MediaQuery.of(
                                                                     context)
                                                                 .size
@@ -533,44 +997,98 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'Interested in helping us improve the waiting experience for patients and visitors?',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'INTERESTED IN HELPING US IMPROVE THE WAITING EXPERIENCE',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
-                                                Text(
-                                                  'Please take our survey!',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'FOR PATIENTS & VISITORS?',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
-                                                Text(
-                                                  'Point your smartphone\'s camera app at the QR code below and follow the link.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'PLEASE TAKE OUR SURVEY:',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 4),
+                                                  child: Text(
+                                                    'POINT YOUR SMARTPHONE\'s CAMERA APP AT THE QR CODE BELOW, ',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'THEN FOLLOW THE LINK.',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
@@ -583,7 +1101,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             .spaceAround,
                                                     children: [
                                                       Image.asset(
-                                                        'assets/images/survey-qr.png',
+                                                        'assets/images/survey-qr-blue.png',
                                                         width: MediaQuery.of(
                                                                     context)
                                                                 .size
@@ -622,44 +1140,98 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    50, 50, 50, 50),
+                                                    20, 20, 20, 20),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  'Would you like to show your appreciation for one of our team members?',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'WOULD YOUR LIKE TO SHOW YOUR APPRECIATION',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
-                                                Text(
-                                                  'Send them a personalized thank you message!',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'FOR ONE OF OUR TEAM MEMBERS?',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
-                                                Text(
-                                                  'Point your smartphone\'s camera app at the QR code below and follow the link.',
-                                                  textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily: 'Open Sans',
-                                                        fontSize: 24,
-                                                      ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'SEND A PERSONALIZED THANK YOU MESSAGE!',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 5),
+                                                  child: Text(
+                                                    'POINT YOUR SMARTPHONE\'S CAMERA APP AT THE QR CODE BELOW,',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(0, 0, 0, 40),
+                                                  child: Text(
+                                                    'THEN FOLLOW THE LINK.',
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily:
+                                                              'Gotham HTF',
+                                                          fontSize: 24,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
                                                 ),
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
@@ -672,7 +1244,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             .spaceAround,
                                                     children: [
                                                       Image.asset(
-                                                        'assets/images/thank-a-team-member-qr.png',
+                                                        'assets/images/thank-a-team-member-qr-blue.png',
                                                         width: MediaQuery.of(
                                                                     context)
                                                                 .size
@@ -765,8 +1337,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         Padding(
@@ -780,11 +1353,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Open Sans',
+                                                  fontFamily: 'Gotham HTF',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryColor,
                                                   fontSize: 24,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -793,8 +1367,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -833,8 +1408,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         Padding(
@@ -848,11 +1424,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Open Sans',
+                                                  fontFamily: 'Gotham HTF',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryColor,
                                                   fontSize: 24,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -862,8 +1439,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -902,8 +1480,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         Padding(
@@ -917,11 +1496,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
                                                 .override(
-                                                  fontFamily: 'Open Sans',
+                                                  fontFamily: 'Gotham HTF',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryColor,
                                                   fontSize: 24,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -931,8 +1511,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyText1
                                               .override(
-                                                fontFamily: 'Open Sans',
+                                                fontFamily: 'Gotham HTF',
                                                 fontSize: 16,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -948,8 +1529,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
-                                          fontFamily: 'Open Sans',
+                                          fontFamily: 'Gotham HTF',
                                           fontSize: 16,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   Text(
@@ -959,8 +1541,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
-                                          fontFamily: 'Open Sans',
+                                          fontFamily: 'Gotham HTF',
                                           fontSize: 16,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ],

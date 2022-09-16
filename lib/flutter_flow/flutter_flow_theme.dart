@@ -23,6 +23,7 @@ abstract class FlutterFlowTheme {
   late Color yellow;
   late Color darkGreen;
   late Color darkRed;
+  late Color textDarkBlue;
 
   String get title1Family => typography.title1Family;
   TextStyle get title1 => typography.title1;
@@ -43,13 +44,13 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  late Color primaryColor = const Color(0xFF00ABE9);
+  late Color primaryColor = const Color(0xFF233E85);
   late Color secondaryColor = const Color(0xFF00ABE9);
   late Color tertiaryColor = const Color(0xFF8FC056);
   late Color alternate = const Color(0xFFF8CC46);
   late Color primaryBackground = const Color(0xFFF1F4F8);
   late Color secondaryBackground = const Color(0xFFFFFFFF);
-  late Color primaryText = const Color(0xFF101213);
+  late Color primaryText = const Color(0xFF233E85);
   late Color secondaryText = const Color(0xFF57636C);
 
   late Color primaryBtnText = Color(0xFFFFFFFF);
@@ -57,7 +58,8 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color orange = Color(0xFFC77137);
   late Color yellow = Color(0xFFD7B03F);
   late Color darkGreen = Color(0xFF6E9443);
-  late Color darkRed = Color(0xFFBF3939);
+  late Color darkRed = Color(0xFFDE3554);
+  late Color textDarkBlue = Color(0xFF233E85);
 }
 
 abstract class Typography {
@@ -82,51 +84,51 @@ class ThemeTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get title1Family => 'Open Sans';
-  TextStyle get title1 => GoogleFonts.getFont(
-        'Open Sans',
+  String get title1Family => 'Gotham HTF';
+  TextStyle get title1 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36,
       );
-  String get title2Family => 'Open Sans';
-  TextStyle get title2 => GoogleFonts.getFont(
-        'Open Sans',
+  String get title2Family => 'Gotham HTF';
+  TextStyle get title2 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 22,
       );
-  String get title3Family => 'Open Sans';
-  TextStyle get title3 => GoogleFonts.getFont(
-        'Open Sans',
+  String get title3Family => 'Gotham HTF';
+  TextStyle get title3 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 20,
       );
-  String get subtitle1Family => 'Open Sans';
-  TextStyle get subtitle1 => GoogleFonts.getFont(
-        'Open Sans',
+  String get subtitle1Family => 'Gotham HTF';
+  TextStyle get subtitle1 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 18,
       );
-  String get subtitle2Family => 'Open Sans';
-  TextStyle get subtitle2 => GoogleFonts.getFont(
-        'Open Sans',
+  String get subtitle2Family => 'Gotham HTF';
+  TextStyle get subtitle2 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
-  String get bodyText1Family => 'Open Sans';
-  TextStyle get bodyText1 => GoogleFonts.getFont(
-        'Open Sans',
+  String get bodyText1Family => 'Gotham HTF';
+  TextStyle get bodyText1 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.normal,
         fontSize: 24,
       );
-  String get bodyText2Family => 'Open Sans';
-  TextStyle get bodyText2 => GoogleFonts.getFont(
-        'Open Sans',
+  String get bodyText2Family => 'Gotham HTF';
+  TextStyle get bodyText2 => TextStyle(
+        fontFamily: 'Gotham HTF',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 14,
