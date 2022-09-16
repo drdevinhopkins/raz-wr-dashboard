@@ -69,6 +69,14 @@ flutter:
     - assets/lottie_animations/
     - assets/rive_animations/
     - assets/pdfs/
+  fonts:
+    - family: 'Gotham HTF'
+      fonts:
+        - asset: assets/fonts/Gotham-HTF-Book.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Gotham_HTF_Bold_2.ttf
+          weight: 700
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
