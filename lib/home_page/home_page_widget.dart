@@ -410,9 +410,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Gotham HTF',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryColor,
+                                                          color: GetStatsCall
+                                                                    .busyColour(
+                                                                  rowGetStatsResponse
+                                                                      .jsonBody,
+                                                                ).toString() ==
+                                                                'red'
+                                                            ? FlutterFlowTheme
+                                                                    .of(context)
+                                                                .darkRed
+                                                            : GetStatsCall
+                                                                            .busyColour(
+                                                                      rowGetStatsResponse
+                                                                          .jsonBody,
+                                                                    )
+                                                                        .toString() ==
+                                                                    'orange'
+                                                                ? FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .orange
+                                                                : FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .yellow,
                                                           fontSize: 36,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -500,7 +519,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   lineHeight:
                                                                       1.5,
                                                                 ),
-                                                      ),
+                                                        ),
                                                     ),
                                                   ],
                                                 ),
@@ -1354,9 +1373,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Gotham HTF',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
+                                                  color: GetStatsCall
+                                                              .occupancyColour(
+                                                            rowGetStatsResponse
+                                                                .jsonBody,
+                                                          ).toString() ==
+                                                          'red'
+                                                      ? FlutterFlowTheme.of(
+                                                              context)
+                                                          .darkRed
+                                                      : GetStatsCall
+                                                                  .occupancyColour(
+                                                                rowGetStatsResponse
+                                                                    .jsonBody,
+                                                              ).toString() ==
+                                                              'orange'
+                                                          ? FlutterFlowTheme.of(
+                                                                  context)
+                                                              .orange
+                                                          : FlutterFlowTheme.of(
+                                                                  context)
+                                                              .yellow,
                                                   fontSize: 24,
                                                   useGoogleFonts: false,
                                                 ),
@@ -1425,9 +1462,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Gotham HTF',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
+                                                  color: GetStatsCall.tbsColour(
+                                                            rowGetStatsResponse
+                                                                .jsonBody,
+                                                          ).toString() ==
+                                                          'red'
+                                                      ? FlutterFlowTheme.of(
+                                                              context)
+                                                          .darkRed
+                                                      : GetStatsCall.tbsColour(
+                                                                rowGetStatsResponse
+                                                                    .jsonBody,
+                                                              ).toString() ==
+                                                              'orange'
+                                                          ? FlutterFlowTheme.of(
+                                                                  context)
+                                                              .orange
+                                                          : FlutterFlowTheme.of(
+                                                                  context)
+                                                              .yellow,
                                                   fontSize: 24,
                                                   useGoogleFonts: false,
                                                 ),
@@ -1497,9 +1550,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodyText1
                                                 .override(
                                                   fontFamily: 'Gotham HTF',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
+                                                  color: GetStatsCall
+                                                              .last24Colour(
+                                                            rowGetStatsResponse
+                                                                .jsonBody,
+                                                          ).toString() ==
+                                                          'red'
+                                                      ? FlutterFlowTheme.of(
+                                                              context)
+                                                          .darkRed
+                                                      : GetStatsCall
+                                                                  .last24Colour(
+                                                                rowGetStatsResponse
+                                                                    .jsonBody,
+                                                              ).toString() ==
+                                                              'orange'
+                                                          ? FlutterFlowTheme.of(
+                                                                  context)
+                                                              .orange
+                                                          : FlutterFlowTheme.of(
+                                                                  context)
+                                                              .yellow,
                                                   fontSize: 24,
                                                   useGoogleFonts: false,
                                                 ),
