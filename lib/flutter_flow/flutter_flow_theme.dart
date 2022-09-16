@@ -115,9 +115,10 @@ class ThemeTypography extends Typography {
   String get subtitle2Family => 'Gotham HTF';
   TextStyle get subtitle2 => TextStyle(
         fontFamily: 'Gotham HTF',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 16,
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 24,
+        fontStyle: FontStyle.italic,
       );
   String get bodyText1Family => 'Gotham HTF';
   TextStyle get bodyText1 => TextStyle(
@@ -129,9 +130,9 @@ class ThemeTypography extends Typography {
   String get bodyText2Family => 'Gotham HTF';
   TextStyle get bodyText2 => TextStyle(
         fontFamily: 'Gotham HTF',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 14,
+        color: theme.primaryText,
+        fontWeight: FontWeight.bold,
+        fontSize: 24,
       );
 }
 
