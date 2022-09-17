@@ -26,17 +26,32 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-            child: Text(
-              'INTERESTED IN HELPING US IMPROVE THE WAITING EXPERIENCE',
-              textAlign: TextAlign.center,
-              style: FlutterFlowTheme.of(context).bodyText1.override(
-                    fontFamily: 'Gotham HTF',
-                    fontSize: 24,
-                    useGoogleFonts: false,
-                  ),
-            ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                child: Text(
+                  'INTERESTED IN HELPING US ',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Gotham HTF',
+                        fontSize: 24,
+                        useGoogleFonts: false,
+                      ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                child: Text(
+                  ' IMPROVE THE WAITING EXPERIENCE',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).subtitle2,
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),

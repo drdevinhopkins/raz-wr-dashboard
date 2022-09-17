@@ -1,6 +1,7 @@
 import '../backend/api_requests/api_calls.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -64,36 +65,37 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'WE ARE WORKING AT',
+                        'WE ARE AT',
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                        child: Text(
-                          GetStatsCall.occupancy(
-                            columnGetStatsResponse.jsonBody,
-                          ).toString(),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Gotham HTF',
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                useGoogleFonts: false,
-                              ),
+                        child: Container(
+                          width: double.infinity,
+                          height: 36,
+                          child: custom_widgets.ColouredText(
+                            width: double.infinity,
+                            height: 36,
+                            textString: GetStatsCall.occupancy(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textColour: GetStatsCall.occupancyColour(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textSize: 24.0,
+                          ),
                         ),
                       ),
                       Text(
                         'CAPACITY',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),
@@ -128,26 +130,26 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         'WE HAVE',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                        child: Text(
-                          GetStatsCall.tbs(
-                            columnGetStatsResponse.jsonBody,
-                          ).toString(),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Gotham HTF',
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                useGoogleFonts: false,
-                              ),
+                        child: Container(
+                          width: double.infinity,
+                          height: 36,
+                          child: custom_widgets.ColouredText(
+                            width: double.infinity,
+                            height: 36,
+                            textString: GetStatsCall.tbs(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textColour: GetStatsCall.tbsColour(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textSize: 24.0,
+                          ),
                         ),
                       ),
                       Text(
@@ -155,7 +157,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),
@@ -190,26 +192,26 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         'WE HAVE HAD',
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                        child: Text(
-                          GetStatsCall.last24(
-                            columnGetStatsResponse.jsonBody,
-                          ).toString(),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Gotham HTF',
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                useGoogleFonts: false,
-                              ),
+                        child: Container(
+                          width: double.infinity,
+                          height: 36,
+                          child: custom_widgets.ColouredText(
+                            width: double.infinity,
+                            height: 36,
+                            textString: GetStatsCall.last24(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textColour: GetStatsCall.last24Colour(
+                              columnGetStatsResponse.jsonBody,
+                            ).toString(),
+                            textSize: 24.0,
+                          ),
                         ),
                       ),
                       Text(
@@ -217,7 +219,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 14,
+                              fontSize: 18,
                               useGoogleFonts: false,
                             ),
                       ),

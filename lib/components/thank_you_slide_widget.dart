@@ -26,17 +26,31 @@ class _ThankYouSlideWidgetState extends State<ThankYouSlideWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-            child: Text(
-              'WOULD YOU LIKE TO SHOW YOUR APPRECIATION',
-              textAlign: TextAlign.center,
-              style: FlutterFlowTheme.of(context).bodyText1.override(
-                    fontFamily: 'Gotham HTF',
-                    fontSize: 24,
-                    useGoogleFonts: false,
-                  ),
-            ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                child: Text(
+                  'WOULD YOU LIKE TO ',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Gotham HTF',
+                        fontSize: 24,
+                        useGoogleFonts: false,
+                      ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                child: Text(
+                  ' SHOW YOUR APPRECIATION',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).subtitle2,
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
