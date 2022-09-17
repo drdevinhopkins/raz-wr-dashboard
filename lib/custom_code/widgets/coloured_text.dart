@@ -30,6 +30,7 @@ class _ColouredTextState extends State<ColouredText> {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           widget.textString,
