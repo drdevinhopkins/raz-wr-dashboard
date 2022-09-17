@@ -1,6 +1,7 @@
 import '../backend/api_requests/api_calls.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -59,18 +60,17 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
                     ),
                   );
                 }
-                final textGetStatsResponse = snapshot.data!;
-                return Text(
-                  GetStatsCall.busy(
-                    textGetStatsResponse.jsonBody,
+                final colouredTextGetStatsResponse = snapshot.data!;
+                return custom_widgets.ColouredText(
+                  width: double.infinity,
+                  height: 60,
+                  textString: GetStatsCall.busy(
+                    colouredTextGetStatsResponse.jsonBody,
                   ).toString(),
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).title1.override(
-                        fontFamily: 'Gotham HTF',
-                        fontWeight: FontWeight.bold,
-                        useGoogleFonts: false,
-                        lineHeight: 1.5,
-                      ),
+                  textColour: GetStatsCall.busyColour(
+                    colouredTextGetStatsResponse.jsonBody,
+                  ).toString(),
+                  textSize: 36.0,
                 );
               },
             ),
