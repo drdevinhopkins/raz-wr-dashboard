@@ -2,6 +2,9 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'reorientation_slide_model.dart';
+export 'reorientation_slide_model.dart';
 
 class ReorientationSlideWidget extends StatefulWidget {
   const ReorientationSlideWidget({Key? key}) : super(key: key);
@@ -12,11 +15,27 @@ class ReorientationSlideWidget extends StatefulWidget {
 }
 
 class _ReorientationSlideWidgetState extends State<ReorientationSlideWidget> {
+  late ReorientationSlideModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => ReorientationSlideModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override

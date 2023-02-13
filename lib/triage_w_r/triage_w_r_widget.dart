@@ -8,61 +8,69 @@ import '../components/triage_reassessment_slide_widget.dart';
 import '../components/users_guide_slide_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:provider/provider.dart';
+import 'triage_w_r_model.dart';
+export 'triage_w_r_model.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class TriageWRWidget extends StatefulWidget {
+  const TriageWRWidget({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _TriageWRWidgetState createState() => _TriageWRWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
-  PageController? pageViewController;
+class _TriageWRWidgetState extends State<TriageWRWidget> {
+  late TriageWRModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => TriageWRModel());
+
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(milliseconds: 14000));
-      await pageViewController?.nextPage(
+      await Future.delayed(const Duration(milliseconds: 10000));
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
-      await pageViewController?.nextPage(
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
-      await pageViewController?.nextPage(
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
-      await pageViewController?.nextPage(
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
-      await pageViewController?.nextPage(
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
-      await pageViewController?.nextPage(
+      await _model.pageViewController?.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.ease,
       );
       await Future.delayed(const Duration(milliseconds: 10000));
 
       context.goNamed(
-        'HomePage',
+        'razWR',
         extra: <String, dynamic>{
           kTransitionInfoKey: TransitionInfo(
             hasTransition: true,
@@ -76,12 +84,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   }
 
   @override
+  void dispose() {
+    _model.dispose();
+
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
       body: GestureDetector(
-        onTap: () => FocusScope.of(context).unfocus(),
+        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -146,7 +162,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
                               child: PageView(
-                                controller: pageViewController ??=
+                                controller: _model.pageViewController ??=
                                     PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
                                 children: [
@@ -168,7 +184,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: OrderOfPrioritySlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.orderOfPrioritySlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: OrderOfPrioritySlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -189,7 +209,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: BusySlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.busySlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: BusySlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -210,7 +234,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: TriageReassessmentSlideWidget(),
+                                      child: wrapWithModel(
+                                        model:
+                                            _model.triageReassessmentSlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: TriageReassessmentSlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -231,7 +260,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: ReorientationSlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.reorientationSlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: ReorientationSlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -252,7 +285,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: UsersGuideSlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.usersGuideSlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: UsersGuideSlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -273,7 +310,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: SurveySlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.surveySlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: SurveySlideWidget(),
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -294,7 +335,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ],
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      child: ThankYouSlideWidget(),
+                                      child: wrapWithModel(
+                                        model: _model.thankYouSlideModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: ThankYouSlideWidget(),
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -305,19 +350,21 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                                child: SmoothPageIndicator(
-                                  controller: pageViewController ??=
+                                child:
+                                    smooth_page_indicator.SmoothPageIndicator(
+                                  controller: _model.pageViewController ??=
                                       PageController(initialPage: 0),
                                   count: 7,
                                   axisDirection: Axis.horizontal,
                                   onDotClicked: (i) {
-                                    pageViewController!.animateToPage(
+                                    _model.pageViewController!.animateToPage(
                                       i,
                                       duration: Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                   },
-                                  effect: ExpandingDotsEffect(
+                                  effect:
+                                      smooth_page_indicator.ExpandingDotsEffect(
                                     expansionFactor: 2,
                                     spacing: 8,
                                     radius: 16,
@@ -337,7 +384,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     Expanded(
                       flex: 1,
-                      child: StatsColumnWidget(),
+                      child: wrapWithModel(
+                        model: _model.statsColumnModel,
+                        updateCallback: () => setState(() {}),
+                        child: StatsColumnWidget(),
+                      ),
                     ),
                   ],
                 ),

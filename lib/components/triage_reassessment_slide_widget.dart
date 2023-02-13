@@ -2,6 +2,9 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'triage_reassessment_slide_model.dart';
+export 'triage_reassessment_slide_model.dart';
 
 class TriageReassessmentSlideWidget extends StatefulWidget {
   const TriageReassessmentSlideWidget({Key? key}) : super(key: key);
@@ -13,11 +16,27 @@ class TriageReassessmentSlideWidget extends StatefulWidget {
 
 class _TriageReassessmentSlideWidgetState
     extends State<TriageReassessmentSlideWidget> {
+  late TriageReassessmentSlideModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => TriageReassessmentSlideModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override

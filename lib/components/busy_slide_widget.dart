@@ -4,6 +4,9 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'busy_slide_model.dart';
+export 'busy_slide_model.dart';
 
 class BusySlideWidget extends StatefulWidget {
   const BusySlideWidget({Key? key}) : super(key: key);
@@ -13,11 +16,27 @@ class BusySlideWidget extends StatefulWidget {
 }
 
 class _BusySlideWidgetState extends State<BusySlideWidget> {
+  late BusySlideModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => BusySlideModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override

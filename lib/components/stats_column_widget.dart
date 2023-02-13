@@ -4,6 +4,9 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'stats_column_model.dart';
+export 'stats_column_model.dart';
 
 class StatsColumnWidget extends StatefulWidget {
   const StatsColumnWidget({Key? key}) : super(key: key);
@@ -13,11 +16,27 @@ class StatsColumnWidget extends StatefulWidget {
 }
 
 class _StatsColumnWidgetState extends State<StatsColumnWidget> {
+  late StatsColumnModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => StatsColumnModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override
@@ -77,10 +96,10 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                         child: Container(
                           width: double.infinity,
-                          height: 36,
+                          height: 32,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 36,
+                            height: 32,
                             textString: GetStatsCall.occupancy(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -93,6 +112,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                       ),
                       Text(
                         'CAPACITY',
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
                               fontSize: 18,
@@ -128,6 +148,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                     children: [
                       Text(
                         'WE HAVE',
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
                               fontSize: 18,
@@ -138,10 +159,10 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                         child: Container(
                           width: double.infinity,
-                          height: 36,
+                          height: 32,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 36,
+                            height: 32,
                             textString: GetStatsCall.tbs(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -190,6 +211,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                     children: [
                       Text(
                         'WE HAVE HAD',
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
                               fontSize: 18,
@@ -200,10 +222,10 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                         child: Container(
                           width: double.infinity,
-                          height: 36,
+                          height: 32,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 36,
+                            height: 32,
                             textString: GetStatsCall.last24(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -233,6 +255,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
               children: [
                 Text(
                   'Last update:',
+                  textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
                         fontSize: 16,
@@ -243,6 +266,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                   GetStatsCall.updateTimestamp(
                     columnGetStatsResponse.jsonBody,
                   ).toString(),
+                  textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
                         fontSize: 16,

@@ -2,6 +2,9 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'survey_slide_model.dart';
+export 'survey_slide_model.dart';
 
 class SurveySlideWidget extends StatefulWidget {
   const SurveySlideWidget({Key? key}) : super(key: key);
@@ -11,11 +14,27 @@ class SurveySlideWidget extends StatefulWidget {
 }
 
 class _SurveySlideWidgetState extends State<SurveySlideWidget> {
+  late SurveySlideModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => SurveySlideModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override

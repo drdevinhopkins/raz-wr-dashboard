@@ -1,2 +1,3 @@
 // Export pages
-export 'home_page/home_page_widget.dart' show HomePageWidget;
+export 'raz_w_r/raz_w_r_widget.dart' show RazWRWidget;
+export 'triage_w_r/triage_w_r_widget.dart' show TriageWRWidget;

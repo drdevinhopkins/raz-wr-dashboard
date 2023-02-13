@@ -7,6 +7,8 @@ import '../flutter_flow_theme.dart';
 
 import '../../index.dart';
 import '../../main.dart';
+import '../lat_lng.dart';
+import '../place.dart';
 import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -27,17 +29,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => HomePageWidget(),
+      errorBuilder: (context, _) => RazWRWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomePageWidget(),
+          builder: (context, _) => RazWRWidget(),
           routes: [
             FFRoute(
-              name: 'HomePage',
-              path: 'homePage',
-              builder: (context, params) => HomePageWidget(),
+              name: 'razWR',
+              path: 'razWR',
+              builder: (context, params) => RazWRWidget(),
+            ),
+            FFRoute(
+              name: 'triageWR',
+              path: 'triageWR',
+              builder: (context, params) => TriageWRWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
@@ -96,7 +103,11 @@ class FFParameters {
         ),
       ).onError((_, __) => [false]).then((v) => v.every((e) => e));
 
-  dynamic getParam(String paramName, ParamType type) {
+  dynamic getParam<T>(
+    String paramName,
+    ParamType type, [
+    bool isList = false,
+  ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
     }
@@ -109,7 +120,11 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam(param, type);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+    );
   }
 }
 

@@ -2,6 +2,9 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'order_of_priority_slide_model.dart';
+export 'order_of_priority_slide_model.dart';
 
 class OrderOfPrioritySlideWidget extends StatefulWidget {
   const OrderOfPrioritySlideWidget({Key? key}) : super(key: key);
@@ -13,11 +16,27 @@ class OrderOfPrioritySlideWidget extends StatefulWidget {
 
 class _OrderOfPrioritySlideWidgetState
     extends State<OrderOfPrioritySlideWidget> {
+  late OrderOfPrioritySlideModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => OrderOfPrioritySlideModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override
@@ -29,7 +48,7 @@ class _OrderOfPrioritySlideWidgetState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
             child: Text(
               '- WELCOME TO THE EMERGENCY DEPARTMENT -',
               textAlign: TextAlign.center,
@@ -43,7 +62,7 @@ class _OrderOfPrioritySlideWidgetState
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
             child: Text(
               'OUR TEAM IS WORKING HARD TO SEE NEW PATIENTS AS SOON AS POSSIBLE.',
               textAlign: TextAlign.center,
