@@ -89,35 +89,35 @@ class ThemeTypography extends Typography {
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 36,
+        fontSize: 36.0,
       );
   String get title2Family => 'Gotham HTF';
   TextStyle get title2 => TextStyle(
         fontFamily: 'Gotham HTF',
         color: theme.secondaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 22,
+        fontSize: 22.0,
       );
   String get title3Family => 'Gotham HTF';
   TextStyle get title3 => TextStyle(
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 20,
+        fontSize: 20.0,
       );
   String get subtitle1Family => 'Gotham HTF';
   TextStyle get subtitle1 => TextStyle(
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 18,
+        fontSize: 18.0,
       );
   String get subtitle2Family => 'Gotham HTF';
   TextStyle get subtitle2 => TextStyle(
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 24,
+        fontSize: 24.0,
         fontStyle: FontStyle.italic,
       );
   String get bodyText1Family => 'Gotham HTF';
@@ -125,14 +125,14 @@ class ThemeTypography extends Typography {
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 24,
+        fontSize: 24.0,
       );
   String get bodyText2Family => 'Gotham HTF';
   TextStyle get bodyText2 => TextStyle(
         fontFamily: 'Gotham HTF',
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
-        fontSize: 24,
+        fontSize: 24.0,
       );
 }
 

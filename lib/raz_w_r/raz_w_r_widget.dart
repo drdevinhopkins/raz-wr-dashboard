@@ -1,13 +1,13 @@
-import '../components/busy_slide_widget.dart';
-import '../components/order_of_priority_slide_widget.dart';
-import '../components/reorientation_slide_widget.dart';
-import '../components/stats_column_widget.dart';
-import '../components/survey_slide_widget.dart';
-import '../components/thank_you_slide_widget.dart';
-import '../components/triage_reassessment_slide_widget.dart';
-import '../components/users_guide_slide_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/components/busy_slide_widget.dart';
+import '/components/order_of_priority_slide_widget.dart';
+import '/components/reorientation_slide_widget.dart';
+import '/components/stats_column_widget.dart';
+import '/components/survey_slide_widget.dart';
+import '/components/thank_you_slide_widget.dart';
+import '/components/triage_reassessment_slide_widget.dart';
+import '/components/users_guide_slide_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -106,7 +106,7 @@ class _RazWRWidgetState extends State<RazWRWidget> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(50, 0, 50, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -114,18 +114,19 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                   children: [
                     Image.asset(
                       'assets/images/small_jgh_logo.png',
-                      width: 300,
+                      width: 300.0,
                       fit: BoxFit.scaleDown,
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(100, 0, 100, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          100.0, 0.0, 100.0, 0.0),
                       child: Text(
                         'URGENCE - EMERGENCY',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
                               color: Color(0xFFDE3554),
-                              fontSize: 28,
+                              fontSize: 28.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
@@ -135,7 +136,7 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                       '${dateTimeFormat('MMMMEEEEd', getCurrentTimestamp)}     ${dateTimeFormat('jm', getCurrentTimestamp)}',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Gotham HTF',
-                            fontSize: 18,
+                            fontSize: 18.0,
                             useGoogleFonts: false,
                           ),
                     ),
@@ -146,7 +147,7 @@ class _RazWRWidgetState extends State<RazWRWidget> {
             Expanded(
               flex: 5,
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(50, 0, 50, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -155,12 +156,12 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                       flex: 5,
                       child: Container(
                         width: double.infinity,
-                        height: 800,
+                        height: 800.0,
                         child: Stack(
                           children: [
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 50.0),
                               child: PageView(
                                 controller: _model.pageViewController ??=
                                     PageController(initialPage: 0),
@@ -168,21 +169,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 12,
+                                            blurRadius: 12.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 5),
+                                            offset: Offset(0.0, 5.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.orderOfPrioritySlideModel,
@@ -193,21 +195,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.busySlideModel,
@@ -218,21 +221,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model:
@@ -244,21 +248,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.reorientationSlideModel,
@@ -269,21 +274,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.usersGuideSlideModel,
@@ -294,21 +300,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.surveySlideModel,
@@ -319,21 +326,22 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        50, 50, 50, 50),
+                                        50.0, 50.0, 50.0, 50.0),
                                     child: Container(
-                                      width: 100,
-                                      height: 100,
+                                      width: 100.0,
+                                      height: 100.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: [
                                           BoxShadow(
-                                            blurRadius: 4,
+                                            blurRadius: 4.0,
                                             color: Color(0x33000000),
-                                            offset: Offset(0, 2),
+                                            offset: Offset(0.0, 2.0),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(30),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: wrapWithModel(
                                         model: _model.thankYouSlideModel,
@@ -346,10 +354,10 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0, 1),
+                              alignment: AlignmentDirectional(0.0, 1.0),
                               child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
                                 child:
                                     smooth_page_indicator.SmoothPageIndicator(
                                   controller: _model.pageViewController ??=
@@ -365,11 +373,11 @@ class _RazWRWidgetState extends State<RazWRWidget> {
                                   },
                                   effect:
                                       smooth_page_indicator.ExpandingDotsEffect(
-                                    expansionFactor: 2,
-                                    spacing: 8,
-                                    radius: 16,
-                                    dotWidth: 16,
-                                    dotHeight: 16,
+                                    expansionFactor: 2.0,
+                                    spacing: 8.0,
+                                    radius: 16.0,
+                                    dotWidth: 16.0,
+                                    dotHeight: 16.0,
                                     dotColor: Color(0xFF9E9E9E),
                                     activeDotColor: FlutterFlowTheme.of(context)
                                         .primaryColor,

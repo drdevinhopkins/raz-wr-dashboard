@@ -1,13 +1,13 @@
-import '../components/busy_slide_widget.dart';
-import '../components/order_of_priority_slide_widget.dart';
-import '../components/reorientation_slide_widget.dart';
-import '../components/stats_column_widget.dart';
-import '../components/survey_slide_widget.dart';
-import '../components/thank_you_slide_widget.dart';
-import '../components/triage_reassessment_slide_widget.dart';
-import '../components/users_guide_slide_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/components/busy_slide_widget.dart';
+import '/components/order_of_priority_slide_widget.dart';
+import '/components/reorientation_slide_widget.dart';
+import '/components/stats_column_widget.dart';
+import '/components/survey_slide_widget.dart';
+import '/components/thank_you_slide_widget.dart';
+import '/components/triage_reassessment_slide_widget.dart';
+import '/components/users_guide_slide_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -53,7 +53,16 @@ class RazWRModel extends FlutterFlowModel {
     statsColumnModel = createModel(context, () => StatsColumnModel());
   }
 
-  void dispose() {}
+  void dispose() {
+    orderOfPrioritySlideModel.dispose();
+    busySlideModel.dispose();
+    triageReassessmentSlideModel.dispose();
+    reorientationSlideModel.dispose();
+    usersGuideSlideModel.dispose();
+    surveySlideModel.dispose();
+    thankYouSlideModel.dispose();
+    statsColumnModel.dispose();
+  }
 
   /// Additional helper methods are added here.
 

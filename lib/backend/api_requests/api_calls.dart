@@ -13,7 +13,7 @@ class GetStatsCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
       callName: 'getStats',
-      apiUrl: 'https://y9ldpv.deta.dev/',
+      apiUrl: 'https://razwrdashboard-1-z9271470.deta.app/',
       callType: ApiCallType.GET,
       headers: {},
       params: {},

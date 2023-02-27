@@ -1,7 +1,7 @@
-import '../backend/api_requests/api_calls.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../custom_code/widgets/index.dart' as custom_widgets;
+import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +34,7 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -42,20 +42,20 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
             child: Text(
               'TODAY, THE EMERGENCY DEPARTMENT IS',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 24,
+                    fontSize: 24.0,
                     fontWeight: FontWeight.normal,
                     useGoogleFonts: false,
                     lineHeight: 1.5,
@@ -63,7 +63,7 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
             child: FutureBuilder<ApiCallResponse>(
               future: GetStatsCall.call(),
               builder: (context, snapshot) {
@@ -71,8 +71,8 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
                 if (!snapshot.hasData) {
                   return Center(
                     child: SizedBox(
-                      width: 50,
-                      height: 50,
+                      width: 50.0,
+                      height: 50.0,
                       child: CircularProgressIndicator(
                         color: FlutterFlowTheme.of(context).primaryColor,
                       ),
@@ -82,7 +82,7 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
                 final colouredTextGetStatsResponse = snapshot.data!;
                 return custom_widgets.ColouredText(
                   width: double.infinity,
-                  height: 60,
+                  height: 60.0,
                   textString: GetStatsCall.busy(
                     colouredTextGetStatsResponse.jsonBody,
                   ).toString(),
@@ -95,14 +95,14 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
             child: Text(
               'WAIT TIMES MAY BE LONGER THAN EXPECTED,',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 24,
+                    fontSize: 24.0,
                     fontWeight: FontWeight.normal,
                     useGoogleFonts: false,
                     lineHeight: 1.5,
@@ -120,14 +120,14 @@ class _BusySlideWidgetState extends State<BusySlideWidget> {
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Gotham HTF',
                       color: FlutterFlowTheme.of(context).textDarkBlue,
-                      fontSize: 24,
+                      fontSize: 24.0,
                       fontWeight: FontWeight.normal,
                       useGoogleFonts: false,
                       lineHeight: 1.5,
                     ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                 child: Text(
                   'THE WAIT TO SEE A DOCTOR, TO UNDERGO TESTS,',
                   textAlign: TextAlign.center,

@@ -1,7 +1,7 @@
-import '../backend/api_requests/api_calls.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../custom_code/widgets/index.dart' as custom_widgets;
+import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +34,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -48,8 +48,8 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
-              width: 50,
-              height: 50,
+              width: 50.0,
+              height: 50.0,
               child: CircularProgressIndicator(
                 color: FlutterFlowTheme.of(context).primaryColor,
               ),
@@ -62,23 +62,24 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Container(
-                width: 300,
-                height: 170,
+                width: 300.0,
+                height: 170.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -88,18 +89,19 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                         child: Container(
                           width: double.infinity,
-                          height: 32,
+                          height: 32.0,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 32,
+                            height: 32.0,
                             textString: GetStatsCall.occupancy(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -115,7 +117,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
@@ -125,23 +127,24 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Container(
-                width: 300,
-                height: 190,
+                width: 300.0,
+                height: 190.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -151,18 +154,19 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                         child: Container(
                           width: double.infinity,
-                          height: 32,
+                          height: 32.0,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 32,
+                            height: 32.0,
                             textString: GetStatsCall.tbs(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -178,7 +182,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
@@ -188,23 +192,24 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Container(
-                width: 300,
-                height: 180,
+                width: 300.0,
+                height: 180.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 4,
+                      blurRadius: 4.0,
                       color: Color(0x33000000),
-                      offset: Offset(0, 2),
+                      offset: Offset(0.0, 2.0),
                     )
                   ],
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -214,18 +219,19 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                         child: Container(
                           width: double.infinity,
-                          height: 32,
+                          height: 32.0,
                           child: custom_widgets.ColouredText(
                             width: double.infinity,
-                            height: 32,
+                            height: 32.0,
                             textString: GetStatsCall.last24(
                               columnGetStatsResponse.jsonBody,
                             ).toString(),
@@ -241,7 +247,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Gotham HTF',
-                              fontSize: 18,
+                              fontSize: 18.0,
                               useGoogleFonts: false,
                             ),
                       ),
@@ -258,7 +264,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
-                        fontSize: 16,
+                        fontSize: 16.0,
                         useGoogleFonts: false,
                       ),
                 ),
@@ -269,7 +275,7 @@ class _StatsColumnWidgetState extends State<StatsColumnWidget> {
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
-                        fontSize: 16,
+                        fontSize: 16.0,
                         useGoogleFonts: false,
                       ),
                 ),

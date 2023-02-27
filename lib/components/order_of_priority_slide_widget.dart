@@ -1,5 +1,5 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +34,7 @@ class _OrderOfPrioritySlideWidgetState
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -42,42 +42,42 @@ class _OrderOfPrioritySlideWidgetState
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 60.0),
             child: Text(
               '- WELCOME TO THE EMERGENCY DEPARTMENT -',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).title1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 28,
+                    fontSize: 28.0,
                     fontWeight: FontWeight.bold,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 60.0),
             child: Text(
               'OUR TEAM IS WORKING HARD TO SEE NEW PATIENTS AS SOON AS POSSIBLE.',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 24,
+                    fontSize: 24.0,
                     fontWeight: FontWeight.normal,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Wrap(
-            spacing: 0,
-            runSpacing: 0,
+            spacing: 0.0,
+            runSpacing: 0.0,
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.end,
             direction: Axis.horizontal,
@@ -96,8 +96,8 @@ class _OrderOfPrioritySlideWidgetState
             ],
           ),
           Wrap(
-            spacing: 0,
-            runSpacing: 0,
+            spacing: 0.0,
+            runSpacing: 0.0,
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.start,
             direction: Axis.horizontal,

@@ -1,5 +1,5 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +32,7 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -40,41 +40,41 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 60.0),
             child: Text(
               '- WELCOME TO THE EMERGENCY DEPARTMENT -',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).title1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 28,
+                    fontSize: 28.0,
                     fontWeight: FontWeight.bold,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
             child: Text(
               'PLEASE TAKE A NUMBERED TICKET,',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
                     color: FlutterFlowTheme.of(context).textDarkBlue,
-                    fontSize: 24,
+                    fontSize: 24.0,
                     fontWeight: FontWeight.normal,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 60),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 60.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +86,7 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
                         color: FlutterFlowTheme.of(context).textDarkBlue,
-                        fontSize: 24,
+                        fontSize: 24.0,
                         fontWeight: FontWeight.normal,
                         useGoogleFonts: false,
                       ),
@@ -97,7 +97,7 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
                         color: FlutterFlowTheme.of(context).textDarkBlue,
-                        fontSize: 24,
+                        fontSize: 24.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: false,
                       ),
@@ -106,10 +106,10 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
             child: Wrap(
-              spacing: 0,
-              runSpacing: 0,
+              spacing: 0.0,
+              runSpacing: 0.0,
               alignment: WrapAlignment.center,
               crossAxisAlignment: WrapCrossAlignment.end,
               direction: Axis.horizontal,
@@ -133,8 +133,8 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
             ),
           ),
           Wrap(
-            spacing: 0,
-            runSpacing: 0,
+            spacing: 0.0,
+            runSpacing: 0.0,
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.end,
             direction: Axis.horizontal,
@@ -157,21 +157,21 @@ class _TriageWelcomeWidgetState extends State<TriageWelcomeWidget> {
             ],
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
                   'assets/images/ramq_new_front.png',
-                  width: 240,
-                  height: 160,
+                  width: 240.0,
+                  height: 160.0,
                   fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'assets/images/ramq_old_front.png',
-                  width: 240,
-                  height: 160,
+                  width: 240.0,
+                  height: 160.0,
                   fit: BoxFit.fill,
                 ),
               ],

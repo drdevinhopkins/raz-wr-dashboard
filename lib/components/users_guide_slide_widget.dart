@@ -1,5 +1,5 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +32,7 @@ class _UsersGuideSlideWidgetState extends State<UsersGuideSlideWidget> {
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -40,7 +40,7 @@ class _UsersGuideSlideWidgetState extends State<UsersGuideSlideWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,7 +50,7 @@ class _UsersGuideSlideWidgetState extends State<UsersGuideSlideWidget> {
             textAlign: TextAlign.center,
             style: FlutterFlowTheme.of(context).bodyText1.override(
                   fontFamily: 'Gotham HTF',
-                  fontSize: 24,
+                  fontSize: 24.0,
                   useGoogleFonts: false,
                 ),
           ),
@@ -60,7 +60,7 @@ class _UsersGuideSlideWidgetState extends State<UsersGuideSlideWidget> {
             style: FlutterFlowTheme.of(context).bodyText2,
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(50, 0, 50, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -74,7 +74,7 @@ class _UsersGuideSlideWidgetState extends State<UsersGuideSlideWidget> {
                 Image.asset(
                   'assets/images/jghuserguideQRC-blue.png',
                   width: MediaQuery.of(context).size.width * 0.2,
-                  height: 200,
+                  height: 200.0,
                   fit: BoxFit.contain,
                 ),
               ],

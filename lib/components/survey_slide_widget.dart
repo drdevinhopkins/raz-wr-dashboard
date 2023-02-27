@@ -1,5 +1,5 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +32,7 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
 
   @override
   void dispose() {
-    _model.dispose();
+    _model.maybeDispose();
 
     super.dispose();
   }
@@ -40,7 +40,7 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -51,19 +51,19 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                 child: Text(
                   'INTERESTED IN HELPING US ',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Gotham HTF',
-                        fontSize: 24,
+                        fontSize: 24.0,
                         useGoogleFonts: false,
                       ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                 child: Text(
                   ' IMPROVE THE WAITING EXPERIENCE',
                   textAlign: TextAlign.center,
@@ -73,19 +73,19 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
             ],
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
             child: Text(
               'FOR PATIENTS & VISITORS?',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
-                    fontSize: 24,
+                    fontSize: 24.0,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
             child: Text(
               'PLEASE TAKE OUR SURVEY:',
               textAlign: TextAlign.center,
@@ -93,31 +93,31 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 4),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
             child: Text(
               'POINT YOUR SMARTPHONE\'s CAMERA APP AT THE QR CODE BELOW, ',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
-                    fontSize: 24,
+                    fontSize: 24.0,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
             child: Text(
               'THEN FOLLOW THE LINK.',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyText1.override(
                     fontFamily: 'Gotham HTF',
-                    fontSize: 24,
+                    fontSize: 24.0,
                     useGoogleFonts: false,
                   ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(50, 0, 50, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -125,7 +125,7 @@ class _SurveySlideWidgetState extends State<SurveySlideWidget> {
                 Image.asset(
                   'assets/images/survey-qr-blue.png',
                   width: MediaQuery.of(context).size.width * 0.2,
-                  height: 150,
+                  height: 150.0,
                   fit: BoxFit.contain,
                 ),
               ],
